@@ -47,6 +47,22 @@ function generateOutro() {
     outro = `That’s the end of today’s ${podcast}. Thanks for joining me, ${host}. See you in the next one!`;
   }
 
-  document.getElementById("output").innerText = outro;
+  const outroGreetings = [
+  `Thank you everyone for being part of today’s episode. Your time and attention mean the world to us, and we hope you leave with new energy and inspiration.`,
+  `We’re so grateful, friends, that you joined us today. Every moment we share with you adds more meaning to this podcast. Until next time, stay positive and keep smiling!`,
+  `A big thanks to all our listeners. You are the reason we create, share, and keep moving forward. We can’t wait to meet you again in the next episode.`,
+  `Thanks people, for tuning in and giving us your precious time. We hope today’s session brought value to your day. Stay connected and stay inspired.`,
+  `We deeply appreciate you, everyone, for being with us till the end. Each episode feels special because of your support and presence.`,
+  `Grateful thanks to our amazing audience. Without you, none of this would be possible. We’ll be back soon with more stories, ideas, and conversations.`,
+  `Thank you dear listeners for joining us. Your support keeps this journey alive. Take care, keep learning, and see you in the next episode.`,
+  `Thanks again to each one of you. This podcast is more than just words — it’s a shared journey, and we’re honored to share it with such wonderful people.`,
+  `We appreciate you, everyone, for your time and energy today. Keep spreading positivity, and remember, the best is yet to come.`,
+  `Big thanks, friends, for listening in. May your days be filled with joy and growth until we meet again in the next episode.`
+];
+
+const randomOutro = outroGreetings[Math.floor(Math.random() * outroGreetings.length)];
+document.getElementById("output").innerText = randomOutro;
+
 }
+
 
