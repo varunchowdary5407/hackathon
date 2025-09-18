@@ -4,22 +4,6 @@ function generateIntro() {
   const host = document.getElementById("hostName").value;
   const style = document.getElementById("style").value;
 
-  let intro = "";
-
-  if (style === "professional") {
-    intro = `🎙️ Welcome to ${podcast}! This is your host ${host}, and today we dive into '${episode}'. Let's get started!`;
-  } else if (style === "storytelling") {
-    intro = `Once upon a conversation... Welcome to ${podcast}, hosted by ${host}. In this episode, '${episode}', a new journey begins.`;
-  } else {
-    intro = `Welcome to ${podcast}. I'm ${host}, and today's episode is '${episode}'. Let's begin!`;
-  }
-
-function generateIntro() {
-  const podcast = document.getElementById("podcastName").value;
-  const episode = document.getElementById("episodeTitle").value;
-  const host = document.getElementById("hostName").value;
-  const style = document.getElementById("style").value;
-
   const introTemplates = [
     `Hello there, and welcome to ${podcast}! This is another episode of ${podcast}, I’m your host ${host}, and today’s topic is “${episode}”.`,
     `Welcome back, everyone! You’re listening to ${podcast}, with your host ${host}. In today’s episode, we’ll dive into “${episode}”.`,
@@ -46,7 +30,7 @@ function generateIntro() {
   // Pick one randomly
   let intro = introTemplates[Math.floor(Math.random() * introTemplates.length)];
 
-  // Style-specific addition
+  // Add style flavor
   if (style === "professional") {
     intro += ` We’re here to bring you clear insights and valuable discussions. Let’s get started right away.`;
   } else if (style === "storytelling") {
@@ -57,24 +41,6 @@ function generateIntro() {
 
   document.getElementById("output").innerText = intro;
 }
-
-
-}
-
-function generateOutro() {
-  const podcast = document.getElementById("podcastName").value;
-  const host = document.getElementById("hostName").value;
-  const style = document.getElementById("style").value;
-
-  let outro = "";
-
-  if (style === "professional") {
-    outro = `🔥 That’s a wrap on this episode of ${podcast}. Thanks for tuning in with ${host}. Don’t forget to subscribe!`;
-  } else if (style === "storytelling") {
-    outro = `And so, another chapter closes. This was ${podcast}, with your host ${host}. Until next time, keep listening.`;
-  } else {
-    outro = `That’s the end of today’s ${podcast}. Thanks for joining me, ${host}. See you in the next one!`;
-  }
 
 function generateOutro() {
   const podcast = document.getElementById("podcastName").value;
@@ -104,10 +70,10 @@ function generateOutro() {
     `Thank you for being part of this episode of ${podcast}. We hope you’ll subscribe, review, and spread the word. Until the next episode, take care and goodbye!`
   ];
 
-  // Pick one outro randomly
+  // Pick one randomly
   let outro = outroTemplates[Math.floor(Math.random() * outroTemplates.length)];
 
-  // Add style flavor if you want (optional)
+  // Add style flavor
   if (style === "professional") {
     outro += ` Stay sharp, stay inspired, and we’ll meet again soon.`;
   } else if (style === "storytelling") {
@@ -118,9 +84,3 @@ function generateOutro() {
 
   document.getElementById("output").innerText = outro;
 }
-
-
-}
-
-
-
