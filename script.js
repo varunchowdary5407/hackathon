@@ -14,7 +14,25 @@ function generateIntro() {
     intro = `Welcome to ${podcast}. I'm ${host}, and today's episode is '${episode}'. Let's begin!`;
   }
 
-  document.getElementById("output").innerText = intro;
+// list of different greeting styles
+const greetings = [
+  `hi ${host}`,
+  `hi welcome ${host}`,
+  `hello ${host}`,
+  `hey there ${host}!`,
+  `good to see you, ${host}`,
+  `what’s up ${host}?`,
+  `greetings ${host}`,
+  `yo ${host}!`,
+  `welcome back ${host}`,
+  `namaste ${host}`
+];
+
+// pick one at random
+const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+// show it instead of intro
+document.getElementById("output").innerText = randomGreeting;
 }
 
 function generateOutro() {
